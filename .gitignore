@@ -2,3 +2,17 @@ train/*
 trains/*
 *.pyc
 
+*.dll
+csharp/ThirdParty/bin/Debug/*
+csharp/ThirdParty/obj/Debug/*
+csharp/ThirdParty/packages/*
+csharp/TrainReservationKata/bin/Debug/*
+csharp/TrainReservationKata/obj/Debug/*
+csharp/TrainReservationKata/packages/*
+csharp/TrainReservationKataSpecification/bin/Debug/*
+csharp/TrainReservationKataSpecification/obj/Debug/*
+csharp/TrainReservationKataSpecification/packages/*
+*.cache
+*.pdb
+*.suo
+*.user
