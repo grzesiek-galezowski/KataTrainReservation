@@ -4,7 +4,7 @@ namespace ThirdParty
 {
   public class ReservationDto
   {
-    public ReservationDto(string trainId, string bookingId, List<Seat> seats)
+    public ReservationDto(string trainId, string bookingId, List<SeatDto> seats)
     {
       TrainId = trainId;
       BookingId = bookingId;
@@ -13,6 +13,6 @@ namespace ThirdParty
 
     public string TrainId { get; }
     public string BookingId { get; }
-    public List<Seat> Seats { get; }
+    public List<SeatDto> Seats { get; }
   }
 }

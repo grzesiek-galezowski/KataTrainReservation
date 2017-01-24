@@ -1,8 +1,8 @@
 ﻿namespace ThirdParty
 {
-  public class Seat
+  public class SeatDto
   {
-    public Seat(string coach, int seatNumber)
+    public SeatDto(string coach, int seatNumber)
     {
       Coach = coach;
       SeatNumber = seatNumber;
@@ -21,7 +21,7 @@
     /// </summary>
     public override bool Equals(object obj)
     {
-      var other = obj as Seat;
+      var other = obj as SeatDto;
 
       return Coach == other.Coach && SeatNumber == other.SeatNumber;
     }

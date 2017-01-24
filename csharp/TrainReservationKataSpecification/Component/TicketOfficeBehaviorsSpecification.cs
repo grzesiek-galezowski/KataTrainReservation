@@ -1,8 +1,8 @@
 using NUnit.Framework;
+using ThirdParty;
 
 namespace TrainReservationKataSpecification.Component
 {
-  [TestFixture]
   public class TicketOfficeBehaviorsSpecification
   {
     [Test]
