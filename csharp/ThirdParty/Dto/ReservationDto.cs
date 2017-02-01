@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ThirdParty
+namespace ThirdParty.Dto
 {
   public class ReservationDto
   {

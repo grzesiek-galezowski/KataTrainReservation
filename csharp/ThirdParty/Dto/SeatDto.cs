@@ -1,4 +1,4 @@
-﻿namespace ThirdParty
+﻿namespace ThirdParty.Dto
 {
   public class SeatDto
   {
