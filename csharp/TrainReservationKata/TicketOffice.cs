@@ -7,7 +7,7 @@ namespace TrainReservationKata
   public class TicketOffice
   {
     //more methods can be added, but reservation request must go through this method:
-    public ReservationDto MakeReservation(ReservationRequestDto requestDto)
+    public ReservationResponseDto MakeReservation(ReservationRequestDto requestDto)
     {
       //TODO: implement this code!
       throw new NotImplementedException();

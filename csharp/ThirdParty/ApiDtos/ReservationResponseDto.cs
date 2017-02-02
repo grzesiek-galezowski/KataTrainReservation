@@ -2,9 +2,9 @@
 
 namespace ThirdParty.ApiDtos
 {
-  public class ReservationDto
+  public class ReservationResponseDto
   {
-    public ReservationDto(string trainId, string bookingId, List<SeatDto> seats)
+    public ReservationResponseDto(string trainId, string bookingId, List<SeatDto> seats)
     {
       TrainId = trainId;
       BookingId = bookingId;
