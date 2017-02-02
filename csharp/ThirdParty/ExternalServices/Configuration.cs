@@ -1,4 +1,4 @@
-﻿using ThirdParty.Dto;
+﻿using ThirdParty.ConfigurationDtos;
 
 namespace ThirdParty.ExternalServices
 {

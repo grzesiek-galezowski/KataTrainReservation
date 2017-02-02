@@ -34,13 +34,16 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dto\TrainEntryDto.cs" />
+    <Compile Include="ConfigurationDtos\TrainEntryDto.cs" />
     <Compile Include="ExternalServices\BookingIdService.cs" />
     <Compile Include="ExternalServices\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Dto\ReservationDto.cs" />
-    <Compile Include="Dto\ReservationRequestDto.cs" />
-    <Compile Include="Dto\SeatDto.cs" />
+    <Compile Include="ApiDtos\ReservationDto.cs" />
+    <Compile Include="ApiDtos\ReservationRequestDto.cs" />
+    <Compile Include="ApiDtos\SeatDto.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dto\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

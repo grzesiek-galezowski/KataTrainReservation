@@ -1,6 +1,7 @@
 using System.Collections.Generic;
+using ThirdParty.ApiDtos;
 
-namespace ThirdParty.Dto
+namespace ThirdParty.ConfigurationDtos
 {
   public class TrainEntryDto
   {

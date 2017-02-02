@@ -1,6 +1,6 @@
 ﻿using System;
 using ThirdParty;
-using ThirdParty.Dto;
+using ThirdParty.ApiDtos;
 
 namespace TrainReservationKata
 {
