@@ -2,7 +2,7 @@
 
 namespace ThirdParty.ExternalServices
 {
-  interface Configuration
+  public interface IConfiguration
   {
     TrainEntryDto[] Load();
   }

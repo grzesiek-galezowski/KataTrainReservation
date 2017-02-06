@@ -16,3 +16,5 @@ csharp/TrainReservationKataSpecification/packages/*
 *.pdb
 *.suo
 *.user
+*.ncrunchproject
+csharp/TrainReservationKata/TrainReservationKata.v3.ncrunchsolution

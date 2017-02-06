@@ -2,7 +2,7 @@
 
 namespace ThirdParty.ExternalServices
 {
-  public interface BookingIdService
+  public interface IBookingIdService
   {
     Guid GenerateId();
   }
