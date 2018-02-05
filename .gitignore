@@ -18,3 +18,8 @@ csharp/TrainReservationKataSpecification/packages/*
 *.user
 *.ncrunchproject
 csharp/TrainReservationKata/TrainReservationKata.v3.ncrunchsolution
+*.lock
+*.bin
+Java/.idea/libraries/*
+Java/.idea/sonarlint/*
+Java/build/*

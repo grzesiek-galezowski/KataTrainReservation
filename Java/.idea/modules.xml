@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/trainkata.iml" filepath="$PROJECT_DIR$/.idea/modules/trainkata.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/trainkata_main.iml" filepath="$PROJECT_DIR$/.idea/modules/trainkata_main.iml" group="trainkata" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/trainkata_test.iml" filepath="$PROJECT_DIR$/.idea/modules/trainkata_test.iml" group="trainkata" />
+    </modules>
+  </component>
+</project>

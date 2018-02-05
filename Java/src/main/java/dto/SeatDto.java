@@ -1,15 +1,16 @@
+package dto;
 
-public class Seat {
+public class SeatDto {
     public final String coach;
     public final int seatNumber;
 
-    public Seat(String coach, int seatNumber) {
+    public SeatDto(String coach, int seatNumber) {
         this.coach = coach;
         this.seatNumber = seatNumber;
     }
 
     public boolean equals(Object o) {
-        Seat other = (Seat)o;
+        SeatDto other = (SeatDto)o;
         return coach==other.coach && seatNumber==other.seatNumber;
     }
 }
