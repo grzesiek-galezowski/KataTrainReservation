@@ -1,19 +1,19 @@
-package dto;
+package response.dto;
 
 import java.util.List;
 
 public class ReservationDto {
 	public final String trainId;
-    public final String bookingId;
+    public final String ticketId;
     public final List<SeatDto> seats;
 
     public ReservationDto(
         String trainId,
-        List<SeatDto> seats,
-        String bookingId) {
+        List<response.dto.SeatDto> seats,
+        String ticketId) {
 
 		this.trainId = trainId;
-        this.bookingId = bookingId;
+        this.ticketId = ticketId;
         this.seats = seats;
     }
 

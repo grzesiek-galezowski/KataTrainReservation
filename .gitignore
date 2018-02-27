@@ -23,3 +23,4 @@ csharp/TrainReservationKata/TrainReservationKata.v3.ncrunchsolution
 Java/.idea/libraries/*
 Java/.idea/sonarlint/*
 Java/build/*
+Java/.idea/modules/test-output/*

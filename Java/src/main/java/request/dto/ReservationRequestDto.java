@@ -1,4 +1,4 @@
-package dto;
+package request.dto;
 
 public class ReservationRequestDto {
 	public final String trainId;

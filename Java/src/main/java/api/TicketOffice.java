@@ -1,13 +1,13 @@
 package api;
 
-import dto.ReservationDto;
-import dto.ReservationRequestDto;
+import request.dto.ReservationRequestDto;
+import response.dto.ReservationDto;
 
 public class TicketOffice {
-    
-    public ReservationDto makeReservation(ReservationRequestDto request) {
-		//TODO: implement this code!
-		return null;
+
+    public ReservationDto makeReservation(
+        ReservationRequestDto request) {
+        throw new RuntimeException("lol");
     }
 
 }

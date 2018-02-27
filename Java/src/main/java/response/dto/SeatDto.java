@@ -1,4 +1,4 @@
-package dto;
+package response.dto;
 
 public class SeatDto {
     public final String coach;
