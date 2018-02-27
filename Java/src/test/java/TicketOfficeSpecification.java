@@ -14,9 +14,9 @@ public class TicketOfficeSpecification {
         val ticketOffice = new TicketOffice();
         val reservation = Any.anonymous(ReservationRequestDto.class);
         //WHEN
-        val reservationDto = ticketOffice.makeReservation(reservation);
+        val ticketDto = ticketOffice.makeReservation(reservation);
 
         //THEN
-        assertThat(reservationDto).isEqualTo(resultDto);
+        assertThat(ticketDto).isEqualTo(resultDto);
     }
 }
