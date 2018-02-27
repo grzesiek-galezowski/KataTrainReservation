@@ -133,8 +133,8 @@
       <file leaf-file-name="TicketOfficeSpecification.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/TicketOfficeSpecification.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="24" column="14" lean-forward="true" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+            <state relative-caret-position="254">
+              <caret line="22" column="14" lean-forward="false" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -544,8 +544,8 @@
         <option value="$PROJECT_DIR$/src/test/java/TrainWithCoachesSpecification.java" />
         <option value="$PROJECT_DIR$/src/main/java/bootstrap/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/api/TicketOffice.java" />
-        <option value="$PROJECT_DIR$/src/test/java/TicketOfficeSpecification.java" />
         <option value="$PROJECT_DIR$/src/main/java/logic/Ticket.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TicketOfficeSpecification.java" />
       </list>
     </option>
   </component>
@@ -1335,8 +1335,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/TicketOfficeSpecification.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="24" column="14" lean-forward="true" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+        <state relative-caret-position="254">
+          <caret line="22" column="14" lean-forward="false" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
           <folding />
         </state>
       </provider>

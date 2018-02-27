@@ -20,6 +20,7 @@ public class TicketOfficeSpecification {
         val resultDto = Any.anonymous(TicketDto.class);
         Ticket ticket = mock(Ticket.class);
 
+        given(ticketFactory.createBlankTicket()).willReturn(ticket);
         given(ticket.toDto()).willReturn(resultDto);
 
         //WHEN
