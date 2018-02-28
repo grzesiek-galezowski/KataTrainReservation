@@ -130,11 +130,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TicketOfficeSpecification.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TicketOfficeSpecification.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/TicketOfficeSpecification.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="502">
-              <caret line="38" column="43" lean-forward="false" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
+            <state relative-caret-position="372">
+              <caret line="35" column="43" lean-forward="true" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -180,11 +180,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TicketOffice.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TicketOffice.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/api/TicketOffice.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="9" column="8" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="24" />
+            <state relative-caret-position="347">
+              <caret line="15" column="47" lean-forward="false" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -554,8 +554,8 @@
         <option value="$PROJECT_DIR$/src/main/java/logic/TicketFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/logic/Command.java" />
         <option value="$PROJECT_DIR$/src/main/java/logic/CommandFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/api/TicketOffice.java" />
         <option value="$PROJECT_DIR$/src/test/java/TicketOfficeSpecification.java" />
+        <option value="$PROJECT_DIR$/src/main/java/api/TicketOffice.java" />
       </list>
     </option>
   </component>
@@ -1338,18 +1338,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/api/TicketOffice.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/TicketOfficeSpecification.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="9" column="8" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="24" />
+        <state relative-caret-position="372">
+          <caret line="35" column="43" lean-forward="true" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TicketOfficeSpecification.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/api/TicketOffice.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="38" column="43" lean-forward="false" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
+        <state relative-caret-position="347">
+          <caret line="15" column="47" lean-forward="false" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
           <folding />
         </state>
       </provider>

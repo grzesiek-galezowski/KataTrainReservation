@@ -13,7 +13,7 @@ public class TicketOffice {
 
     public TicketDto makeReservation(
         ReservationRequestDto request) {
-        throw new RuntimeException("lol");
+        return new TicketDto(null, null, null);
     }
 
 }
