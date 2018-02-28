@@ -19,16 +19,16 @@ public class TicketOfficeSpecification {
     @Test
     public void shouldCreateAndExecuteCommandWithTicketAndTrain() {
         //WHEN
-        val ticketOffice = new TicketOffice();
+        val commandFactory = mock(CommandFactory.class);
+        val ticketOffice = new TicketOffice(commandFactory);
         val reservation = Any.anonymous(ReservationRequestDto.class);
         val resultDto = Any.anonymous(TicketDto.class);
-        Ticket ticket = mock(Ticket.class);
+        val ticket = mock(Ticket.class);
         val bookCommand = mock(Command.class);
-
         val ticketFactory = mock(TicketFactory.class);
+
         given(ticketFactory.createBlankTicket()).willReturn(ticket);
         given(ticket.toDto()).willReturn(resultDto);
-        val commandFactory = mock(CommandFactory.class);
         given(commandFactory.createBookCommand(reservation))
             .willReturn(bookCommand);
 
