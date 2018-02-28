@@ -24,6 +24,7 @@ public class TicketOffice {
         ReservationRequestDto request) {
         val ticket = ticketFactory.createBlankTicket();
         val command = commandFactory.createBookCommand(request, ticket);
+        command.execute();
         return new TicketDto(null, null, null);
     }
 
