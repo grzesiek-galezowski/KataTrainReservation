@@ -25,3 +25,4 @@ Java/.idea/sonarlint/*
 Java/build/*
 Java/.idea/modules/test-output/*
 Java/out/*
+Java/.idea/workspace.xml

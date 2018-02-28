@@ -9,6 +9,7 @@ import response.dto.TicketDto;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.BDDMockito.given;
+import static org.mockito.BDDMockito.then;
 import static org.mockito.Mockito.mock;
 
 public class TicketOfficeSpecification {
@@ -29,6 +30,7 @@ public class TicketOfficeSpecification {
         val ticketDto = ticketOffice.makeReservation(reservation);
 
         //THEN
+        then(bookCommand).should().execute(ticket);
         assertThat(ticketDto).isEqualTo(resultDto);
     }
 }
