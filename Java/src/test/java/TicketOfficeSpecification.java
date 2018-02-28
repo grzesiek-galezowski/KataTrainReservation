@@ -4,7 +4,6 @@ import logic.Command;
 import logic.Ticket;
 import logic.TicketFactory;
 import lombok.val;
-import org.testng.CommandLineArgs;
 import org.testng.annotations.Test;
 import request.dto.ReservationRequestDto;
 import response.dto.TicketDto;
@@ -28,6 +27,8 @@ public class TicketOfficeSpecification {
         val ticketFactory = mock(TicketFactory.class);
         given(ticketFactory.createBlankTicket()).willReturn(ticket);
         given(ticket.toDto()).willReturn(resultDto);
+        given(commandFactory.createBookCommand(reservation))
+            .willReturn(bookCommand);
 
         //WHEN
         val ticketDto = ticketOffice.makeReservation(reservation);
