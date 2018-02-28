@@ -1,14 +1,18 @@
 package api;
 
 import logic.CommandFactory;
+import logic.TicketFactory;
 import request.dto.ReservationRequestDto;
 import response.dto.TicketDto;
 
 public class TicketOffice {
 
-    public TicketOffice(CommandFactory commandFactory) {
+    private CommandFactory commandFactory;
+
+    public TicketOffice(CommandFactory commandFactory, TicketFactory ticketFactory) {
         //todo implement
 
+        this.commandFactory = commandFactory;
     }
 
     public TicketDto makeReservation(
