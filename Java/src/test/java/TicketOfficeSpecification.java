@@ -29,14 +29,14 @@ public class TicketOfficeSpecification {
 
         given(ticketFactory.createBlankTicket()).willReturn(ticket);
         given(ticket.toDto()).willReturn(resultDto);
-        given(commandFactory.createBookCommand(reservation))
+        given(commandFactory.createBookCommand(reservation, ticket))
             .willReturn(bookCommand);
 
         //WHEN
         val ticketDto = ticketOffice.makeReservation(reservation);
 
         //THEN
-        then(bookCommand).should().execute(ticket);
+        then(bookCommand).should().execute();
         assertThat(ticketDto).isEqualTo(resultDto);
     }
 }
