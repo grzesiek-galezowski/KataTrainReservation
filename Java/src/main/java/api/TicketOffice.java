@@ -25,7 +25,7 @@ public class TicketOffice {
         val ticket = ticketFactory.createBlankTicket();
         val command = commandFactory.createBookCommand(request, ticket);
         command.execute();
-        return new TicketDto(null, null, null);
+        return ticket.toDto();
     }
 
 }
