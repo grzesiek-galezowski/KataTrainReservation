@@ -1,8 +1,10 @@
 import api.TicketOffice;
 import autofixture.publicinterface.Any;
+import logic.Command;
 import logic.Ticket;
 import logic.TicketFactory;
 import lombok.val;
+import org.testng.CommandLineArgs;
 import org.testng.annotations.Test;
 import request.dto.ReservationRequestDto;
 import response.dto.TicketDto;
@@ -21,6 +23,7 @@ public class TicketOfficeSpecification {
         val reservation = Any.anonymous(ReservationRequestDto.class);
         val resultDto = Any.anonymous(TicketDto.class);
         Ticket ticket = mock(Ticket.class);
+        val bookCommand = mock(Command.class);
 
         val ticketFactory = mock(TicketFactory.class);
         given(ticketFactory.createBlankTicket()).willReturn(ticket);
