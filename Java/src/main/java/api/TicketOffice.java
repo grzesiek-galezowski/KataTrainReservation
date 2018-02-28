@@ -14,7 +14,6 @@ public class TicketOffice {
     public TicketOffice(
         CommandFactory commandFactory,
         TicketFactory ticketFactory) {
-        //todo implement
 
         this.commandFactory = commandFactory;
         this.ticketFactory = ticketFactory;
