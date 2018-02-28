@@ -1,6 +1,7 @@
 import api.TicketOffice;
 import autofixture.publicinterface.Any;
 import logic.Command;
+import logic.CommandFactory;
 import logic.Ticket;
 import logic.TicketFactory;
 import lombok.val;
@@ -27,6 +28,7 @@ public class TicketOfficeSpecification {
         val ticketFactory = mock(TicketFactory.class);
         given(ticketFactory.createBlankTicket()).willReturn(ticket);
         given(ticket.toDto()).willReturn(resultDto);
+        val commandFactory = mock(CommandFactory.class);
         given(commandFactory.createBookCommand(reservation))
             .willReturn(bookCommand);
 
