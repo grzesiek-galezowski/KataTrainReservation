@@ -3,13 +3,16 @@ package logic;
 import request.dto.ReservationRequestDto;
 
 public class BookingCommandFactory implements CommandFactory {
-    public BookingCommandFactory(TrainRepository trainRepo) {
-        //todo implement
+    private TrainRepository trainRepo;
 
+    public BookingCommandFactory(TrainRepository trainRepo) {
+        this.trainRepo = trainRepo;
     }
 
     @Override
     public Command createBookCommand(ReservationRequestDto reservation, Ticket ticket) {
-        return new BookTicketCommand(reservation, ticket);
+        return new BookTicketCommand(
+            reservation,
+            ticket, trainRepo.getTrainBy(reservation.trainId));
     }
 }
