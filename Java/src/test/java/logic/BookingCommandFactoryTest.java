@@ -17,7 +17,8 @@ public class BookingCommandFactoryTest {
         val ticket = mock(Ticket.class);
 
         //WHEN
-        Command result = bookingCommandFactory.createBookCommand(reservation, ticket);
+        Command result = bookingCommandFactory
+            .createBookCommand(reservation, ticket);
 
         //THEN
         assertThat(result).isInstanceOf(BookTicketCommand.class);
