@@ -12,10 +12,12 @@ public class BookingCommandFactoryTest {
     @Test
     public void shouldCreateBookTicketCommand() {
         //GIVEN
-        val bookingCommandFactory = new BookingCommandFactory();
+        val trainRepo = mock(TrainRepository.class);
+        val bookingCommandFactory = new BookingCommandFactory(
+            trainRepo
+        );
         val reservation = mock(ReservationRequestDto.class);
         val ticket = mock(Ticket.class);
-
         //WHEN
         Command result = bookingCommandFactory
             .createBookCommand(reservation, ticket);
