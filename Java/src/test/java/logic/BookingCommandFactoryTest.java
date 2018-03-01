@@ -6,6 +6,7 @@ import request.dto.ReservationRequestDto;
 
 import static com.github.grzesiek_galezowski.test_environment.types.ObjectGraphContainsDependencyCondition.dependencyOn;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.mock;
 
 public class BookingCommandFactoryTest {
@@ -18,6 +19,10 @@ public class BookingCommandFactoryTest {
         );
         val reservation = mock(ReservationRequestDto.class);
         val ticket = mock(Ticket.class);
+
+        given(trainRepo.getTrainBy(reservation.trainId))
+            .willReturn(train);
+
         //WHEN
         Command result = bookingCommandFactory
             .createBookCommand(reservation, ticket);
@@ -26,5 +31,7 @@ public class BookingCommandFactoryTest {
         assertThat(result).isInstanceOf(BookTicketCommand.class);
         assertThat(result).has(dependencyOn(reservation));
         assertThat(result).has(dependencyOn(ticket));
+        assertThat(result).has(dependencyOn(ticket));
+        assertThat(result).has(dependencyOn(train));
     }
 }
