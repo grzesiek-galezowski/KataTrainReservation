@@ -1,9 +1,12 @@
 package logic;
 
+import org.testng.annotations.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
 public class BookTicketCommandSpecification {
-    /*
+
     @Test
-    //hmm, should reserve a train, but I have no train
     public void shouldXXXXXXXXXXXXX() {
         //GIVEN
 
@@ -11,5 +14,5 @@ public class BookTicketCommandSpecification {
 
         //THEN
         assertThat(1).isEqualTo(2);
-    }*/
+    }
 }
