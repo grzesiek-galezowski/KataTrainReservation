@@ -5,7 +5,7 @@ import request.dto.ReservationRequestDto;
 public class BookTicketCommand implements Command {
     private ReservationRequestDto reservation;
     private Ticket ticket;
-    private Train trainBy;
+    private Train train;
 
     public BookTicketCommand(
         ReservationRequestDto reservation,
@@ -13,12 +13,12 @@ public class BookTicketCommand implements Command {
         Train train) {
         this.reservation = reservation;
         this.ticket = ticket;
-        this.trainBy = train;
+        this.train = train;
     }
 
     @Override
     public void execute() {
-        //todo implement
-
+        //todo a full DTO is not required
+        train.reserve(reservation.seatCount, ticket);
     }
 }

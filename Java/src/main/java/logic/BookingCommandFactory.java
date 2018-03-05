@@ -13,6 +13,7 @@ public class BookingCommandFactory implements CommandFactory {
     public Command createBookCommand(ReservationRequestDto reservation, Ticket ticket) {
         return new BookTicketCommand(
             reservation,
-            ticket, trainRepo.getTrainBy(reservation.trainId));
+            ticket,
+            trainRepo.getTrainBy(reservation.trainId));
     }
 }
