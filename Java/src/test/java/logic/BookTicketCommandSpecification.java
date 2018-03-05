@@ -11,7 +11,7 @@ import static org.mockito.Mockito.mock;
 public class BookTicketCommandSpecification {
 
     @Test
-    public void shouldXXXXXXXXXXXXX() {
+    public void shouldReserveSeatsOnTrainWhenExecuted() {
         //GIVEN
         val reservation = Any.anonymous(ReservationRequestDto.class);
         val ticket = Any.anonymous(Ticket.class);
