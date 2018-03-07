@@ -15,9 +15,9 @@ public class TrainWithCoachesSpecification {
         val trainWithCoaches = new TrainWithCoaches();
         val seatCount = Any.intValue();
         val ticket = mock(TicketInProgress.class);
-        Coach coach1 = mock(Coach.class);
-        Coach coach2 = mock(Coach.class);
-        Coach coach3 = mock(Coach.class);
+        val coach1 = mock(Coach.class);
+        val coach2 = mock(Coach.class);
+        val coach3 = mock(Coach.class);
 
         //WHEN
         trainWithCoaches.reserve(seatCount, ticket);
