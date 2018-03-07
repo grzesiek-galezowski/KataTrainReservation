@@ -4,6 +4,7 @@ import autofixture.publicinterface.Any;
 import lombok.val;
 import org.testng.annotations.Test;
 
+import static org.mockito.BDDMockito.given;
 import static org.mockito.BDDMockito.then;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.never;
@@ -21,6 +22,14 @@ public class TrainWithCoachesSpecification {
             coach1, coach2, coach3
         );
 
+        given(coach1.allowsUpFrontReservationOf(seatCount))
+            .willReturn(false);
+        given(coach2.allowsUpFrontReservationOf(seatCount))
+            .willReturn(true);
+        given(coach3.allowsUpFrontReservationOf(seatCount))
+            .willReturn(true);
+
+
         //WHEN
         trainWithCoaches.reserve(seatCount, ticket);
 
@@ -29,6 +38,5 @@ public class TrainWithCoachesSpecification {
         then(coach2).should().reserve(seatCount, ticket);
         then(coach3).should(never()).reserve(seatCount, ticket);
     }
-    //todo ticket in progress instead of plain ticket
-
+    //todo what if no coach allows up front reservation?
 }
