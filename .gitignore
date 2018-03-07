@@ -26,3 +26,5 @@ Java/build/*
 Java/.idea/modules/test-output/*
 Java/out/*
 Java/.idea/workspace.xml
+Java/out/production/classes/api/TicketOffice.class
+*.class

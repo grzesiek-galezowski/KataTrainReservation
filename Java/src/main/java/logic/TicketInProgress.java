@@ -2,6 +2,6 @@ package logic;
 
 import response.dto.TicketDto;
 
-public interface Ticket {
+public interface TicketInProgress {
     TicketDto toDto();
 }

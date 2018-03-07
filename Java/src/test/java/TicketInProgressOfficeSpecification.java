@@ -2,7 +2,7 @@ import api.TicketOffice;
 import autofixture.publicinterface.Any;
 import logic.Command;
 import logic.CommandFactory;
-import logic.Ticket;
+import logic.TicketInProgress;
 import logic.TicketFactory;
 import lombok.val;
 import org.testng.annotations.Test;
@@ -14,7 +14,7 @@ import static org.mockito.BDDMockito.given;
 import static org.mockito.BDDMockito.then;
 import static org.mockito.Mockito.mock;
 
-public class TicketOfficeSpecification {
+public class TicketInProgressOfficeSpecification {
     
     @Test
     public void shouldCreateAndExecuteCommandWithTicketAndTrain() {
@@ -22,7 +22,7 @@ public class TicketOfficeSpecification {
         val commandFactory = mock(CommandFactory.class);
         val reservation = Any.anonymous(ReservationRequestDto.class);
         val resultDto = Any.anonymous(TicketDto.class);
-        val ticket = mock(Ticket.class);
+        val ticket = mock(TicketInProgress.class);
         val bookCommand = mock(Command.class);
         val ticketFactory = mock(TicketFactory.class);
         val ticketOffice = new TicketOffice(

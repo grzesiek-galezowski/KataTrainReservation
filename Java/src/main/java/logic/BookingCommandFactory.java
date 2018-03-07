@@ -10,10 +10,10 @@ public class BookingCommandFactory implements CommandFactory {
     }
 
     @Override
-    public Command createBookCommand(ReservationRequestDto reservation, Ticket ticket) {
+    public Command createBookCommand(ReservationRequestDto reservation, TicketInProgress ticketInProgress) {
         return new BookTicketCommand(
             reservation,
-            ticket,
+            ticketInProgress,
             trainRepo.getTrainBy(reservation.trainId));
     }
 }

@@ -2,7 +2,7 @@ package logic;
 
 public class TrainTicketFactory implements TicketFactory {
     @Override
-    public Ticket createBlankTicket() {
+    public TicketInProgress createBlankTicket() {
         //todo implement
         return null;
     }

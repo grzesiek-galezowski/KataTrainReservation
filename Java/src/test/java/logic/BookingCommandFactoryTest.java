@@ -18,7 +18,7 @@ public class BookingCommandFactoryTest {
             trainRepo
         );
         val reservation = mock(ReservationRequestDto.class);
-        val ticket = mock(Ticket.class);
+        val ticket = mock(TicketInProgress.class);
         val train = mock(Train.class);
 
         given(trainRepo.getTrainBy(reservation.trainId))
