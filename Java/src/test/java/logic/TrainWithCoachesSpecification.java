@@ -12,12 +12,14 @@ public class TrainWithCoachesSpecification {
     @Test
     public void shouldXXXXX() { //todo rename
         //GIVEN
-        val trainWithCoaches = new TrainWithCoaches();
         val seatCount = Any.intValue();
         val ticket = mock(TicketInProgress.class);
         val coach1 = mock(Coach.class);
         val coach2 = mock(Coach.class);
         val coach3 = mock(Coach.class);
+        val trainWithCoaches = new TrainWithCoaches(
+            coach1, coach2, coach3
+        );
 
         //WHEN
         trainWithCoaches.reserve(seatCount, ticket);
