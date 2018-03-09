@@ -32,6 +32,37 @@ public class TrainWithCoachesSpecification {
         then(coach3).should(never()).reserve(seatCount, ticket);
     }
 
+    @Test
+    public void
+    shouldReserveSeatsInFirstCoachThatHasFreeSeatsIfNoneAllowsReservationUpFront() {
+        //GIVEN
+        val seatCount = Any.intValue();
+        val ticket = mock(TicketInProgress.class);
+        val coach1 = coachWithout(seatCount);
+        val coach2 = coachWithoutAvailableUpFront(seatCount);
+        val coach3 = coachWithout(seatCount);
+        val trainWithCoaches = new TrainWithCoaches(
+            coach1, coach2, coach3
+        );
+
+        //WHEN
+        trainWithCoaches.reserve(seatCount, ticket);
+
+        //THEN
+        then(coach1).should(never()).reserve(seatCount, ticket);
+        then(coach2).should().reserve(seatCount, ticket);
+        then(coach3).should(never()).reserve(seatCount, ticket);
+    }
+
+    private Coach coachWithout(Integer seatCount) {
+        val coach1 = mock(Coach.class);
+        given(coach1.allowsUpFrontReservationOf(seatCount))
+            .willReturn(false);
+        given(coach1.allowsReservationOf(seatCount))
+            .willReturn(false);
+        return coach1;
+    }
+
     private Coach coachWithAvailableUpFront(Integer seatCount) {
         val coach2 = mock(Coach.class);
         given(coach2.allowsUpFrontReservationOf(seatCount))
@@ -49,42 +80,4 @@ public class TrainWithCoachesSpecification {
             .willReturn(true);
         return coach1;
     }
-
-    @Test
-    public void
-    shouldReserveSeatsInFirstCoachThatHasFreeSeatsIfNoneAllowsReservationUpFront() {
-        //GIVEN
-        val seatCount = Any.intValue();
-        val ticket = mock(TicketInProgress.class);
-        val coach1 = mock(Coach.class);
-        val coach2 = mock(Coach.class);
-        val coach3 = mock(Coach.class);
-        val trainWithCoaches = new TrainWithCoaches(
-            coach1, coach2, coach3
-        );
-
-        given(coach1.allowsUpFrontReservationOf(seatCount))
-            .willReturn(false);
-        given(coach2.allowsUpFrontReservationOf(seatCount))
-            .willReturn(false);
-        given(coach3.allowsUpFrontReservationOf(seatCount))
-            .willReturn(false);
-        given(coach1.allowsReservationOf(seatCount))
-            .willReturn(false);
-        given(coach2.allowsReservationOf(seatCount))
-            .willReturn(true);
-        given(coach3.allowsReservationOf(seatCount))
-            .willReturn(false);
-
-        //WHEN
-        trainWithCoaches.reserve(seatCount, ticket);
-
-        //THEN
-        then(coach1).should(never()).reserve(seatCount, ticket);
-        then(coach2).should().reserve(seatCount, ticket);
-        then(coach3).should(never()).reserve(seatCount, ticket);
-    }
-
-
-    //todo what if no coach allows up front reservation?
 }

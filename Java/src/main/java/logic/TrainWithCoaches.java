@@ -15,6 +15,7 @@ public class TrainWithCoaches implements Train {
                 return;
             }
         }
+
         for (Coach coach : coaches) {
             if(coach.allowsReservationOf(seatCount)) {
                 coach.reserve(seatCount, ticketInProgress);
