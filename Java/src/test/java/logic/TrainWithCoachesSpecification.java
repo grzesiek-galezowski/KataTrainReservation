@@ -11,7 +11,7 @@ import static org.mockito.Mockito.never;
 
 public class TrainWithCoachesSpecification {
     @Test
-    public void shouldXXXXX() { //todo rename
+    public void shouldReserveSeatsInFirstCoachThatHasPlaceBelowLimit() { //todo rename
         //GIVEN
         val seatCount = Any.intValue();
         val ticket = mock(TicketInProgress.class);
