@@ -15,26 +15,14 @@ public class TrainWithCoachesSpecification {
         //GIVEN
         val seatCount = Any.intValue();
         val ticket = mock(TicketInProgress.class);
-        val coach1 = mock(Coach.class);
-        val coach2 = mock(Coach.class);
-        val coach3 = mock(Coach.class);
+
+        Coach coach1 = coachWithoutAvailableUpFront(seatCount);
+        Coach coach2 = coachWithAvailableUpFront(seatCount);
+        Coach coach3 = coachWithAvailableUpFront(seatCount);
+
         val trainWithCoaches = new TrainWithCoaches(
             coach1, coach2, coach3
         );
-
-        given(coach1.allowsUpFrontReservationOf(seatCount))
-            .willReturn(false);
-        given(coach2.allowsUpFrontReservationOf(seatCount))
-            .willReturn(true);
-        given(coach3.allowsUpFrontReservationOf(seatCount))
-            .willReturn(true);
-        given(coach1.allowsReservationOf(seatCount))
-            .willReturn(true);
-        given(coach2.allowsReservationOf(seatCount))
-            .willReturn(true);
-        given(coach3.allowsReservationOf(seatCount))
-            .willReturn(true);
-
         //WHEN
         trainWithCoaches.reserve(seatCount, ticket);
 
@@ -42,6 +30,24 @@ public class TrainWithCoachesSpecification {
         then(coach1).should(never()).reserve(seatCount, ticket);
         then(coach2).should().reserve(seatCount, ticket);
         then(coach3).should(never()).reserve(seatCount, ticket);
+    }
+
+    private Coach coachWithAvailableUpFront(Integer seatCount) {
+        val coach2 = mock(Coach.class);
+        given(coach2.allowsUpFrontReservationOf(seatCount))
+            .willReturn(true);
+        given(coach2.allowsReservationOf(seatCount))
+            .willReturn(true);
+        return coach2;
+    }
+
+    private Coach coachWithoutAvailableUpFront(Integer seatCount) {
+        val coach1 = mock(Coach.class);
+        given(coach1.allowsUpFrontReservationOf(seatCount))
+            .willReturn(false);
+        given(coach1.allowsReservationOf(seatCount))
+            .willReturn(true);
+        return coach1;
     }
 
     @Test
