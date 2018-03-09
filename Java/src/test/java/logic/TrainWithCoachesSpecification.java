@@ -28,6 +28,12 @@ public class TrainWithCoachesSpecification {
             .willReturn(true);
         given(coach3.allowsUpFrontReservationOf(seatCount))
             .willReturn(true);
+        given(coach1.allowsReservationOf(seatCount))
+            .willReturn(true);
+        given(coach2.allowsReservationOf(seatCount))
+            .willReturn(true);
+        given(coach3.allowsReservationOf(seatCount))
+            .willReturn(true);
 
         //WHEN
         trainWithCoaches.reserve(seatCount, ticket);
