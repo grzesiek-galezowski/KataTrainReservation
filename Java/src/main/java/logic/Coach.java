@@ -4,4 +4,6 @@ public interface Coach {
     void reserve(int seatCount, TicketInProgress ticket);
 
     boolean allowsUpFrontReservationOf(int seatCount);
+
+    boolean allowsReservationOf(int seatCount);
 }

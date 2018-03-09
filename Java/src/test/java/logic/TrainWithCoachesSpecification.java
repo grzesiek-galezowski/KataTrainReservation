@@ -11,7 +11,7 @@ import static org.mockito.Mockito.never;
 
 public class TrainWithCoachesSpecification {
     @Test
-    public void shouldReserveSeatsInFirstCoachThatHasPlaceBelowLimit() { 
+    public void shouldReserveSeatsInFirstCoachThatHasPlaceBelowLimit() {
         //GIVEN
         val seatCount = Any.intValue();
         val ticket = mock(TicketInProgress.class);
@@ -28,6 +28,41 @@ public class TrainWithCoachesSpecification {
             .willReturn(true);
         given(coach3.allowsUpFrontReservationOf(seatCount))
             .willReturn(true);
+
+        //WHEN
+        trainWithCoaches.reserve(seatCount, ticket);
+
+        //THEN
+        then(coach1).should(never()).reserve(seatCount, ticket);
+        then(coach2).should().reserve(seatCount, ticket);
+        then(coach3).should(never()).reserve(seatCount, ticket);
+    }
+
+    @Test
+    public void
+    shouldReserveSeatsInFirstCoachThatHasFreeSeatsIfNoneAllowsReservationUpFront() {
+        //GIVEN
+        val seatCount = Any.intValue();
+        val ticket = mock(TicketInProgress.class);
+        val coach1 = mock(Coach.class);
+        val coach2 = mock(Coach.class);
+        val coach3 = mock(Coach.class);
+        val trainWithCoaches = new TrainWithCoaches(
+            coach1, coach2, coach3
+        );
+
+        given(coach1.allowsUpFrontReservationOf(seatCount))
+            .willReturn(false);
+        given(coach2.allowsUpFrontReservationOf(seatCount))
+            .willReturn(false);
+        given(coach3.allowsUpFrontReservationOf(seatCount))
+            .willReturn(false);
+        given(coach1.allowsReservationOf(seatCount))
+            .willReturn(false);
+        given(coach2.allowsReservationOf(seatCount))
+            .willReturn(true);
+        given(coach3.allowsReservationOf(seatCount))
+            .willReturn(false);
 
         //WHEN
         trainWithCoaches.reserve(seatCount, ticket);
